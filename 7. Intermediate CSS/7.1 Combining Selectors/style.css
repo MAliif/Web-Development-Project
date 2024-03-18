@@ -1,1 +1,26 @@
 /* Write your code here: */
+
+/* Grouping CSS bisa lebih dari 1 */
+h1, h2 {
+    color: blueviolet;
+}
+
+/* Dari parent turun ke child */
+.box > p {
+    color: firebrick;
+}
+
+/* Apapun yang ada di class box bisa diedit CSS nya */
+.box .list {
+    color: blue;
+}
+
+/* Untuk spesifik */
+li.done{
+    color: seagreen;
+}
+
+/* Menggabungkan beberapa selector */
+ul p.done {
+    font-size: 0.5rem;
+}
