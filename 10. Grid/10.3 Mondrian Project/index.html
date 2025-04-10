@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mondrian Project</title>
   <style>
+    /* KUNCINYA PAKAI GRID COLUMN DAN GRID ROWS, TAPI TETAP BERDASARKAN GRID TEMPLATE COLUMNS/ROWS */
+
     /* 
     Write your CSS here 
     Gap Colour: #000
@@ -19,11 +21,51 @@
     HINT: Remember you can't change the properties of grid lines.
     But grid lines are transparent!
     */
+
+    .container {
+      display: grid;
+      width: 748px;
+      height: 748px;
+      gap: 9px;
+      background-color: #000;
+
+      grid-template-columns: 320px 198px 153px 50px;
+      grid-template-rows: 414px 130px 155px 20px;
+    }
+
+    .white {
+      background-color: #F0F1EC;
+    }
+    .red {
+      background-color: #E72F24;
+    }
+    .black {
+      background-color: #232629;
+    }
+    .blue {
+      background-color: #004592;
+    }
+    .yellow {
+      background-color: #F9D01E;
+    }
   </style>
 </head>
 
 <body>
   <!-- Write your HTML here -->
+  <div style="display: flex;justify-content: center;align-items: center;height: 100vh;">
+    <div class="container">
+      <div class="red"></div>
+      <div class="white" style="grid-column: span 3;"></div>
+      <div class="white" style="grid-column: span 1;grid-row: span 2;"></div>
+      <div class="white" style="grid-column: span 2;grid-row: span 2;"></div>
+      <div class="blue" style="grid-column: span 1;grid-row: span 1;border-bottom: 10px solid #232629;"></div>
+      <div class="white" style="grid-column: span 1;grid-row: span 2;"></div>
+      <div class="white" style="grid-column: span 1;grid-row: span 1;"></div>
+      <div class="yellow" style="grid-column: span 1;grid-row: span 1;"></div>
+      <div class="black" style="grid-column: span 1;grid-row: span 1;"></div>
+    </div>
+  </div>
 </body>
 
 </html>
